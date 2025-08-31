@@ -1,6 +1,11 @@
 import { useEffect } from 'react';
 import Layout from './components/Layout.jsx';
 import LandingPage from './pages/LandingPage.jsx';
+import UnifiedAnalysisPage from './pages/UnifiedAnalysisPage.jsx';
+import DownloadPage from './pages/DownloadPage.jsx';
+import SettingsPage from './pages/SettingsPage.jsx';
+import HelpPage from './pages/HelpPage.jsx';
+import AboutPage from './pages/AboutPage.jsx';
 import { useAppStore } from './store/index.js';
 
 function App() {
@@ -20,13 +25,15 @@ function App() {
       case 'landing':
         return <LandingPage />;
       case 'analysis':
-        return <div className="p-8"><h1 className="text-2xl font-bold">Analysis Page Coming Soon...</h1></div>;
-      case 'zones':
-        return <div className="p-8"><h1 className="text-2xl font-bold">Zones Page Coming Soon...</h1></div>;
-      case 'taxonomy':
-        return <div className="p-8"><h1 className="text-2xl font-bold">Taxonomy Page Coming Soon...</h1></div>;
+        return <UnifiedAnalysisPage />;
+      case 'download':
+        return <DownloadPage />;
+      case 'settings':
+        return <SettingsPage />;
+      case 'help':
+        return <HelpPage />;
       case 'about':
-        return <div className="p-8"><h1 className="text-2xl font-bold">About Page Coming Soon...</h1></div>;
+        return <AboutPage />;
       default:
         return <LandingPage />;
     }

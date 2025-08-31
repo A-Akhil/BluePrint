@@ -3,22 +3,16 @@ import { useAppStore } from '../store/index.js';
 import { CloudArrowUpIcon, PlayIcon, ChartBarIcon, BeakerIcon } from '@heroicons/react/24/outline';
 
 const LandingPage = () => {
-  const { setCurrentPage, simulateZHNSWSearch } = useAppStore();
-  const [uploadedFile, setUploadedFile] = useState(null);
+  const { setCurrentPage, setUploadedFile } = useAppStore();
+  const [uploadedFile, setLocalUploadedFile] = useState(null);
 
-  const handleFileUpload = (event) => {
+    const handleFileUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
+      setLocalUploadedFile(file);
       setUploadedFile(file);
-      // Simulate processing the uploaded file
-      const mockQuery = {
-        id: `uploaded_${Date.now()}`,
-        sequence_data: "ATCGTGATCGTAATCGATCGATCGTAATCGATCGTAATCG",
-        length: 298,
-        type: "18S rRNA",
-        filename: file.name
-      };
-      simulateZHNSWSearch(mockQuery);
+      // Immediately redirect to analysis page for processing
+      setCurrentPage('analysis');
     }
   };
 

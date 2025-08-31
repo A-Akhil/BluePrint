@@ -9,8 +9,9 @@ const Navigation = () => {
   const navItems = [
     { id: 'landing', name: 'Home', href: '#' },
     { id: 'analysis', name: 'Analysis', href: '#' },
-    { id: 'zones', name: 'Zones', href: '#' },
-    { id: 'taxonomy', name: 'Taxonomy', href: '#' },
+    { id: 'download', name: 'Download', href: '#' },
+    { id: 'settings', name: 'Settings', href: '#' },
+    { id: 'help', name: 'Help', href: '#' },
     { id: 'about', name: 'About', href: '#' }
   ];
 

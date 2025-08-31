@@ -8,6 +8,7 @@ export const useAppStore = create((set, get) => ({
   zones: mockData.zones,
   currentSearch: null,
   selectedZones: [],
+  uploadedFile: null,
   
   // UI state
   darkMode: false,
@@ -39,6 +40,8 @@ export const useAppStore = create((set, get) => ({
   setCurrentPage: (page) => set({ currentPage: page }),
   
   setLoading: (loading) => set({ isLoading: loading }),
+  
+  setUploadedFile: (file) => set({ uploadedFile: file }),
   
   setSearchQuery: (query) => set({ searchQuery: query }),
   
@@ -137,7 +140,17 @@ export const useAppStore = create((set, get) => ({
   
   // Get statistics
   getStatistics: () => {
-    const sequences = get().getFilteredSequences();
+    // Use direct sequences data instead of filtered results for initial stats
+    const sequences = mockData.sequences;
+    if (!sequences || sequences.length === 0) {
+      return {
+        total: 0,
+        novel: 0,
+        highConfidence: 0,
+        avgConfidence: 0
+      };
+    }
+    
     return {
       total: sequences.length,
       novel: sequences.filter(s => s.novel).length,
