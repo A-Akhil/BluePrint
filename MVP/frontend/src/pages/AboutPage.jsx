@@ -54,7 +54,7 @@ const AboutPage = () => {
         <div className="card p-8 mb-12">
           <div className="flex items-center mb-6">
             <TrophyIcon className="w-8 h-8 text-amber-600 mr-3" />
-            <h2 className="text-2xl font-bold text-deep-900 dark:text-white">Smart India Hackathon 2024</h2>
+            <h2 className="text-2xl font-bold text-deep-900 dark:text-white">Smart India Hackathon 2025</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <span className="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
               <span className="text-sm text-deep-600 dark:text-deep-300">
-                Smart India Hackathon 2024
+                Smart India Hackathon 2025
               </span>
             </div>
           </div>
@@ -68,7 +68,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-deep-200 dark:border-deep-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-deep-500 dark:text-deep-400">
-              © 2024 DeepSea eDNA Explorer. Built for Smart India Hackathon.
+              © 2025 DeepSea eDNA Explorer. Built for Smart India Hackathon.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <span className="text-sm text-deep-500 dark:text-deep-400">
