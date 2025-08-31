@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply bg-white dark:bg-deep-900 text-deep-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ocean-600 hover:bg-ocean-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-deep-100 hover:bg-deep-200 dark:bg-deep-800 dark:hover:bg-deep-700 text-deep-900 dark:text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-deep-800 rounded-xl shadow-lg border border-deep-200 dark:border-deep-700;
+  }
+  
+  .table-header {
+    @apply bg-deep-50 dark:bg-deep-800 text-deep-700 dark:text-deep-300 font-medium text-sm uppercase tracking-wider;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-deep-100 dark:bg-deep-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-deep-300 dark:bg-deep-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-deep-400 dark:bg-deep-500;
+}
