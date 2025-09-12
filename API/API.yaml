@@ -1,0 +1,677 @@
+openapi: 3.0.3
+info:
+  title: Deep-Sea eDNA Analysis API
+  description: API endpoints for managing deep-sea eDNA biodiversity analysis, including data upload, classification, visualization, and reporting.
+  version: 1.0.0
+servers:
+  - url: https://api.deepsea-edna.org/v1
+    description: Production server
+tags:
+  - name: Authentication
+  - name: Samples
+  - name: Processing
+  - name: Search
+  - name: Visualization
+  - name: Maps
+  - name: Reports
+  - name: Monitoring
+
+paths:
+
+  # ==============================
+  # Authentication APIs
+  # ==============================
+
+  /auth/register:
+    post:
+      tags:
+        - Authentication
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+                role:
+                  type: string
+      responses:
+        '201':
+          description: User registered
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  userId:
+                    type: string
+
+  /auth/login:
+    post:
+      tags:
+        - Authentication
+      summary: User login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      name:
+                        type: string
+                      role:
+                        type: string
+
+  /auth/refresh:
+    post:
+      tags:
+        - Authentication
+      summary: Refresh JWT token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                refreshToken:
+                  type: string
+      responses:
+        '200':
+          description: Token refreshed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+
+  # ==============================
+  # Samples APIs
+  # ==============================
+
+  /samples/upload:
+    post:
+      tags:
+        - Samples
+      summary: Upload a sequencing file and metadata
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                metadata:
+                  type: string
+                  description: JSON string with location, date, temperature, salinity, etc.
+      responses:
+        '201':
+          description: Upload successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sampleId:
+                    type: string
+                  message:
+                    type: string
+
+  /samples/validate:
+    post:
+      tags:
+        - Samples
+      summary: Validate uploaded file format
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sampleId:
+                  type: string
+      responses:
+        '200':
+          description: Validation result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid:
+                    type: boolean
+                  message:
+                    type: string
+
+  /samples/{sampleId}/download:
+    get:
+      tags:
+        - Samples
+      summary: Download sample file and metadata
+      parameters:
+        - name: sampleId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: File download link
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  fileUrl:
+                    type: string
+                  metadata:
+                    type: object
+
+  /samples/{sampleId}/export:
+    get:
+      tags:
+        - Samples
+      summary: Export results in CSV or JSON format
+      parameters:
+        - name: sampleId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: format
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: [csv, json]
+      responses:
+        '200':
+          description: Export successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  fileUrl:
+                    type: string
+
+  # ==============================
+  # Processing APIs
+  # ==============================
+
+  /samples/{sampleId}/start:
+    post:
+      tags:
+        - Processing
+      summary: Start processing of a sample
+      parameters:
+        - name: sampleId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Processing started
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  estimatedTime:
+                    type: string
+
+  /samples/{sampleId}/stop:
+    post:
+      tags:
+        - Processing
+      summary: Stop processing of a sample
+      parameters:
+        - name: sampleId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Processing stopped
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /samples/{sampleId}/cancel:
+    post:
+      tags:
+        - Processing
+      summary: Cancel processing of a sample
+      parameters:
+        - name: sampleId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Processing cancelled
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /samples/{sampleId}/status:
+    get:
+      tags:
+        - Processing
+      summary: Get processing status
+      parameters:
+        - name: sampleId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Processing status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  progress:
+                    type: integer
+                  estimatedTimeRemaining:
+                    type: string
+
+  # ==============================
+  # Search APIs
+  # ==============================
+
+  /samples/search:
+    get:
+      tags:
+        - Search
+      summary: Search samples by various criteria
+      parameters:
+        - name: location
+          in: query
+          schema:
+            type: string
+        - name: species
+          in: query
+          schema:
+            type: string
+        - name: taxonomicLevel
+          in: query
+          schema:
+            type: string
+        - name: dateRange
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  samples:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        sampleId:
+                          type: string
+                        location:
+                          type: string
+                        collectionDate:
+                          type: string
+                        abundance:
+                          type: integer
+                        commonTaxa:
+                          type: array
+                          items:
+                            type: string
+
+  /samples/filter:
+    post:
+      tags:
+        - Search
+      summary: Filter samples with advanced criteria
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                  properties:
+                    taxonomicLevel:
+                      type: string
+                    abundance:
+                      type: object
+                      properties:
+                        min:
+                          type: integer
+                    novelSequences:
+                      type: boolean
+      responses:
+        '200':
+          description: Filter results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  samples:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        sampleId:
+                          type: string
+                        location:
+                          type: string
+
+  # ==============================
+  # Visualization APIs
+  # ==============================
+
+  /samples/{sampleId}/taxonomy:
+    get:
+      tags:
+        - Visualization
+      summary: Get taxonomic classification as a tree
+      parameters:
+        - name: sampleId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Taxonomic tree
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tree:
+                    type: object
+
+  /samples/{sampleId}/abundance:
+    get:
+      tags:
+        - Visualization
+      summary: Get species abundance data
+      parameters:
+        - name: sampleId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Abundance data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  abundance:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        species:
+                          type: string
+                        count:
+                          type: integer
+                        confidence:
+                          type: number
+
+  /samples/{sampleId}/confidence:
+    get:
+      tags:
+        - Visualization
+      summary: Get confidence scores for species classification
+      parameters:
+        - name: sampleId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Confidence scores
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  scores:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        species:
+                          type: string
+                        score:
+                          type: number
+
+  # ==============================
+  # Maps APIs
+  # ==============================
+
+  /maps/samples:
+    get:
+      tags:
+        - Maps
+      summary: Get all sample locations for map display
+      responses:
+        '200':
+          description: Sample locations
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  locations:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        sampleId:
+                          type: string
+                        coordinates:
+                          type: object
+                          properties:
+                            lat:
+                              type: number
+                            lon:
+                              type: number
+                        abundance:
+                          type: integer
+
+  /maps/hotspots:
+    get:
+      tags:
+        - Maps
+      summary: Get biodiversity hotspots
+      responses:
+        '200':
+          description: Biodiversity hotspots
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  hotspots:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        lat:
+                          type: number
+                        lon:
+                          type: number
+                        richness:
+                          type: integer
+
+  # ==============================
+  # Reports APIs
+  # ==============================
+
+  /reports/generate:
+    post:
+      tags:
+        - Reports
+      summary: Generate a summary report for a sample
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sampleId:
+                  type: string
+                format:
+                  type: string
+                  enum: [pdf]
+      responses:
+        '200':
+          description: Report generation initiated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reportUrl:
+                    type: string
+                  message:
+                    type: string
+
+  /reports/{sampleId}/status:
+    get:
+      tags:
+        - Reports
+      summary: Check report generation status
+      parameters:
+        - name: sampleId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Report status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  downloadUrl:
+                    type: string
+
+  # ==============================
+  # Monitoring APIs
+  # ==============================
+
+  /logs/{sampleId}:
+    get:
+      tags:
+        - Monitoring
+      summary: Get logs for a sample processing
+      parameters:
+        - name: sampleId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Logs
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  logs:
+                    type: array
+                    items:
+                      type: string
+
+  /system/status:
+    get:
+      tags:
+        - Monitoring
+      summary: Get system resource usage
+      responses:
+        '200':
+          description: System status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  cpuUsage:
+                    type: string
+                  memoryUsage:
+                    type: string
+                  gpuUsage:
+                    type: string
+                  queueLength:
+                    type: integer
+
