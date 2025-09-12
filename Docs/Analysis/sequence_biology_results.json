@@ -1,0 +1,62 @@
+{
+  "analysis_type": "Sequence-level biological analysis for deep-sea eDNA",
+  "sequence_findings": [
+    {
+      "finding": "Could not sample SSU_eukaryote_rRNA - may need blastdbcmd tool",
+      "taxonomic_evidence": "Tool limitation prevents direct sequence analysis",
+      "biological_significance": "Database exists but content analysis requires BLAST+ tools"
+    },
+    {
+      "finding": "Could not sample ITS_eukaryote_sequences sequences",
+      "taxonomic_evidence": "Unable to extract taxonomic information",
+      "biological_significance": "ITS database present but requires sequence-level access"
+    },
+    {
+      "finding": "TIER_1_PRIMARY: SSU_eukaryote_rRNA-nucl",
+      "taxonomic_evidence": "Target: All eukaryotes (protists, metazoans, fungi); Success rate: 60-80% of deep-sea eDNA sequences",
+      "biological_significance": "Rationale: 18S rRNA - universal eukaryotic marker; Cost: LOW"
+    },
+    {
+      "finding": "TIER_2_SECONDARY: LSU_eukaryote_rRNA-nucl, 28S_fungal_sequences-nucl",
+      "taxonomic_evidence": "Target: Higher-level taxonomy, phylogenetic placement; Success rate: 40-60% additional assignments",
+      "biological_significance": "Rationale: 28S rRNA - complementary phylogenetic information; Cost: LOW"
+    },
+    {
+      "finding": "TIER_3_SPECIES_LEVEL: ITS_eukaryote_sequences-nucl, ITS_RefSeq_Fungi-nucl",
+      "taxonomic_evidence": "Target: Fungi and some protists; Success rate: 10-30% of sequences (high confidence)",
+      "biological_significance": "Rationale: Species-level identification when possible; Cost: LOW"
+    },
+    {
+      "finding": "TIER_4_COMPREHENSIVE: nt_euk-nucl, ref_euk_rep_genomes-nucl",
+      "taxonomic_evidence": "Target: Any eukaryotic sequences; Success rate: 5-15% additional assignments",
+      "biological_significance": "Rationale: Backup for unassigned sequences; Cost: VERY HIGH"
+    },
+    {
+      "finding": "Critical recommendation for deep-sea eDNA",
+      "taxonomic_evidence": "EXPECT 20-40% unassigned sequences due to novel deep-sea taxa",
+      "biological_significance": "Essential for accurate deep-sea biodiversity assessment"
+    },
+    {
+      "finding": "Critical recommendation for deep-sea eDNA",
+      "taxonomic_evidence": "IMPLEMENT phylogenetic placement for sequences <80% identity",
+      "biological_significance": "Essential for accurate deep-sea biodiversity assessment"
+    },
+    {
+      "finding": "Critical recommendation for deep-sea eDNA",
+      "taxonomic_evidence": "FOCUS on protist diversity (highest abundance in deep-sea samples)",
+      "biological_significance": "Essential for accurate deep-sea biodiversity assessment"
+    },
+    {
+      "finding": "Critical recommendation for deep-sea eDNA",
+      "taxonomic_evidence": "VALIDATE cnidarian and metazoan IDs (high false positive risk)",
+      "biological_significance": "Essential for accurate deep-sea biodiversity assessment"
+    },
+    {
+      "finding": "Critical recommendation for deep-sea eDNA",
+      "taxonomic_evidence": "CLUSTER unassigned sequences to identify potential new lineages",
+      "biological_significance": "Essential for accurate deep-sea biodiversity assessment"
+    }
+  ],
+  "taxonomic_composition": {},
+  "timestamp": "2025-09-11T17:12:10.326744"
+}

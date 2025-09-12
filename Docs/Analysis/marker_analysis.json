@@ -1,0 +1,40 @@
+{
+  "18S_rRNA": {
+    "databases": [
+      "SSU_eukaryote_rRNA"
+    ],
+    "optimal_length": "1200-2000bp (full) or 400-800bp (V4)",
+    "resolution": "Genus to phylum",
+    "deep_sea_score": 5,
+    "expected_success": "60-80%"
+  },
+  "28S_rRNA": {
+    "databases": [
+      "LSU_eukaryote_rRNA",
+      "28S_fungal_sequences"
+    ],
+    "optimal_length": "1000-4000bp",
+    "resolution": "Higher taxonomy",
+    "deep_sea_score": 4,
+    "expected_success": "40-60%"
+  },
+  "ITS_region": {
+    "databases": [
+      "ITS_eukaryote_sequences",
+      "ITS_RefSeq_Fungi"
+    ],
+    "optimal_length": "200-800bp",
+    "resolution": "Species level",
+    "deep_sea_score": 2,
+    "expected_success": "10-30%"
+  },
+  "COI": {
+    "databases": [
+      "nt_euk (limited)"
+    ],
+    "optimal_length": "650bp",
+    "resolution": "Species level",
+    "deep_sea_score": 1,
+    "expected_success": "<5%"
+  }
+}

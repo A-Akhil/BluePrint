@@ -1,0 +1,32 @@
+{
+  "SSU_eukaryote_rRNA": {
+    "relevance": "PRIMARY - 18S rRNA universal marker",
+    "sequences": 8784,
+    "avg_length": 1800.6904599271402
+  },
+  "LSU_eukaryote_rRNA": {
+    "relevance": "SECONDARY - 28S rRNA phylogenetic",
+    "sequences": 6575,
+    "avg_length": 2135.743422053232
+  },
+  "ITS_eukaryote_sequences": {
+    "relevance": "TERTIARY - Species identification",
+    "sequences": 77582,
+    "avg_length": 782.5275966074605
+  },
+  "ITS_RefSeq_Fungi": {
+    "relevance": "SUPPLEMENTARY - Fungal diversity",
+    "sequences": 18547,
+    "avg_length": 594.1038442874858
+  },
+  "28S_fungal_sequences": {
+    "relevance": "SUPPLEMENTARY - Fungal phylogeny",
+    "sequences": 11345,
+    "avg_length": 966.7603349493169
+  },
+  "nt_euk": {
+    "relevance": "COMPREHENSIVE - All eukaryotic sequences",
+    "sequences": 96990074,
+    "avg_length": 23769.384225926045
+  }
+}

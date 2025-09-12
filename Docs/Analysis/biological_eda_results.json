@@ -1,0 +1,216 @@
+{
+  "problem_focus": "deep-sea eukaryotic eDNA taxonomy identification",
+  "target_markers": [
+    "18S",
+    "COI",
+    "28S",
+    "ITS",
+    "SSU",
+    "LSU"
+  ],
+  "target_taxa": [
+    "eukaryotes",
+    "protists",
+    "cnidarians",
+    "metazoans"
+  ],
+  "biological_findings": [
+    {
+      "finding": "nt_euk-nucl: 96,990,074 eukaryotic sequences (comprehensive)",
+      "taxa_relevance": "BROAD COVERAGE - mixed markers and taxa",
+      "marker_suitability": "Good backup for unassigned sequences",
+      "deep_sea_coverage": "May contain some deep-sea sequences but requires filtering"
+    },
+    {
+      "finding": "SSU_eukaryote_rRNA-nucl: 8,784 18S sequences for eukaryotic identification",
+      "taxa_relevance": "PRIMARY TARGET for protists, cnidarians, metazoans",
+      "marker_suitability": "EXCELLENT - optimal length for 18S phylogeny",
+      "deep_sea_coverage": "Critical for deep-sea eukaryotic diversity assessment"
+    },
+    {
+      "finding": "18S_fungal_sequences-nucl: 3,692 18S sequences for eukaryotic identification",
+      "taxa_relevance": "PRIMARY TARGET for protists, cnidarians, metazoans",
+      "marker_suitability": "GOOD - suitable for 18S metabarcoding",
+      "deep_sea_coverage": "Critical for deep-sea eukaryotic diversity assessment"
+    },
+    {
+      "finding": "ITS_eukaryote_sequences-nucl: 77,582 ITS sequences for species identification",
+      "taxa_relevance": "SPECIES-LEVEL identification, especially fungi",
+      "marker_suitability": "EXCELLENT - optimal ITS length for species ID",
+      "deep_sea_coverage": "Limited deep-sea coverage but high resolution when available"
+    },
+    {
+      "finding": "LSU_prokaryote_rRNA-nucl: 4,047 sequences - LSU",
+      "taxa_relevance": "Taxa focus: microbes",
+      "marker_suitability": "Needs sequence-level analysis to assess suitability",
+      "deep_sea_coverage": "Unknown deep-sea representation"
+    },
+    {
+      "finding": "ITS_RefSeq_Fungi-nucl: 18,547 ITS sequences for species identification",
+      "taxa_relevance": "SPECIES-LEVEL identification, especially fungi",
+      "marker_suitability": "EXCELLENT - optimal ITS length for species ID",
+      "deep_sea_coverage": "Limited deep-sea coverage but high resolution when available"
+    },
+    {
+      "finding": "16S_ribosomal_RNA-nucl: 27,354 sequences - 16S",
+      "taxa_relevance": "Taxa focus: microbes",
+      "marker_suitability": "Needs sequence-level analysis to assess suitability",
+      "deep_sea_coverage": "Unknown deep-sea representation"
+    },
+    {
+      "finding": "28S_fungal_sequences-nucl: 11,345 28S sequences for eukaryotic phylogeny",
+      "taxa_relevance": "SECONDARY TARGET for higher-level taxonomy",
+      "marker_suitability": "GOOD - partial 28S useful for identification",
+      "deep_sea_coverage": "Useful for deep-sea taxonomic placement"
+    },
+    {
+      "finding": "LSU_eukaryote_rRNA-nucl: 6,575 28S sequences for eukaryotic phylogeny",
+      "taxa_relevance": "SECONDARY TARGET for higher-level taxonomy",
+      "marker_suitability": "EXCELLENT - full-length 28S resolution",
+      "deep_sea_coverage": "Useful for deep-sea taxonomic placement"
+    },
+    {
+      "finding": "ref_euk_rep_genomes-nucl: 10,677,305 eukaryotic sequences (comprehensive)",
+      "taxa_relevance": "BROAD COVERAGE - mixed markers and taxa",
+      "marker_suitability": "Good backup for unassigned sequences",
+      "deep_sea_coverage": "May contain some deep-sea sequences but requires filtering"
+    },
+    {
+      "finding": "Database limitation: Depth bias",
+      "taxa_relevance": "Most sequences from 0-200m; deep-sea (>200m) underrepresented",
+      "marker_suitability": "Impacts eDNA classification accuracy",
+      "deep_sea_coverage": "Requires phylogenetic placement for novel sequences"
+    },
+    {
+      "finding": "Database limitation: Geographic bias",
+      "taxa_relevance": "Atlantic/Pacific coastal regions overrepresented vs abyssal plains",
+      "marker_suitability": "Impacts eDNA classification accuracy",
+      "deep_sea_coverage": "Requires phylogenetic placement for novel sequences"
+    },
+    {
+      "finding": "Database limitation: Taxonomic bias",
+      "taxa_relevance": "Known taxa from accessible environments vs novel deep-sea lineages",
+      "marker_suitability": "Impacts eDNA classification accuracy",
+      "deep_sea_coverage": "Requires phylogenetic placement for novel sequences"
+    },
+    {
+      "finding": "Database limitation: Marker bias",
+      "taxa_relevance": "18S available but COI limited for deep-sea metazoans",
+      "marker_suitability": "Impacts eDNA classification accuracy",
+      "deep_sea_coverage": "Requires phylogenetic placement for novel sequences"
+    },
+    {
+      "finding": "Database limitation: Temporal bias",
+      "taxa_relevance": "Recent collections may miss deep-sea seasonal patterns",
+      "marker_suitability": "Impacts eDNA classification accuracy",
+      "deep_sea_coverage": "Requires phylogenetic placement for novel sequences"
+    },
+    {
+      "finding": "Expected deep-sea taxa: Protists",
+      "taxa_relevance": "Groups: Radiolaria, Foraminifera, Ciliates, Flagellates; Abundance: High in sediment and water column",
+      "marker_suitability": "Best markers: 18S rRNA",
+      "deep_sea_coverage": "Database coverage: Moderate - coastal species well represented"
+    },
+    {
+      "finding": "Expected deep-sea taxa: Cnidarians",
+      "taxa_relevance": "Groups: Deep-sea corals, Hydrozoa, Scyphozoa; Abundance: Moderate around seamounts/hydrothermal vents",
+      "marker_suitability": "Best markers: 18S rRNA, COI",
+      "deep_sea_coverage": "Database coverage: Poor - most deep-sea species undescribed"
+    },
+    {
+      "finding": "Expected deep-sea taxa: Metazoans",
+      "taxa_relevance": "Groups: Nematodes, Copepods, Polychaetes, Bivalves; Abundance: High diversity in sediments",
+      "marker_suitability": "Best markers: 18S rRNA, COI, 28S",
+      "deep_sea_coverage": "Database coverage: Very poor - high endemism in deep-sea"
+    },
+    {
+      "finding": "Expected deep-sea taxa: Fungi",
+      "taxa_relevance": "Groups: Marine fungi, Yeasts; Abundance: Present but low in deep-sea",
+      "marker_suitability": "Best markers: ITS, 18S, 28S",
+      "deep_sea_coverage": "Database coverage: Poor - marine fungi understudied"
+    },
+    {
+      "finding": "Strategy: Primary_18S_Strategy",
+      "taxa_relevance": "Rationale: 18S rRNA is universal eukaryotic marker",
+      "marker_suitability": "Sensitivity: High for protists, moderate for metazoans; Specificity: High phylogenetic signal",
+      "deep_sea_coverage": "Deep-sea suitability: Good - best available option"
+    },
+    {
+      "finding": "Strategy: Secondary_28S_Strategy",
+      "taxa_relevance": "Rationale: 28S provides complementary phylogenetic information",
+      "marker_suitability": "Sensitivity: Moderate - fewer sequences available; Specificity: High for higher-level taxonomy",
+      "deep_sea_coverage": "Deep-sea suitability: Moderate - good for placement"
+    },
+    {
+      "finding": "Strategy: Species_Level_Strategy",
+      "taxa_relevance": "Rationale: ITS provides species-level resolution",
+      "marker_suitability": "Sensitivity: Low - limited taxa with ITS; Specificity: Very high for fungi and some protists",
+      "deep_sea_coverage": "Deep-sea suitability: Poor - limited deep-sea representation"
+    },
+    {
+      "finding": "Strategy: Comprehensive_Backup",
+      "taxa_relevance": "Rationale: Broad coverage for unassigned sequences",
+      "marker_suitability": "Sensitivity: Very high - all available sequences; Specificity: Variable - mixed markers",
+      "deep_sea_coverage": "Deep-sea suitability: Low-Medium - needle in haystack"
+    },
+    {
+      "finding": "Recommended eDNA pipeline hierarchy",
+      "taxa_relevance": "Balances sensitivity, specificity, and computational efficiency",
+      "marker_suitability": "Uses marker-specific databases in order of phylogenetic resolution",
+      "deep_sea_coverage": "Addresses deep-sea representation gaps with phylogenetic methods"
+    }
+  ],
+  "database_suitability": {
+    "nt_euk-nucl": {
+      "priority": "MEDIUM",
+      "use_case": "Comprehensive eukaryotic search",
+      "deep_sea_value": "Low-Medium - broad but shallow coverage"
+    },
+    "SSU_eukaryote_rRNA-nucl": {
+      "priority": "HIGH",
+      "use_case": "18S eukaryotic identification",
+      "deep_sea_value": "High - universal eukaryotic marker"
+    },
+    "18S_fungal_sequences-nucl": {
+      "priority": "HIGH",
+      "use_case": "18S eukaryotic identification",
+      "deep_sea_value": "High - universal eukaryotic marker"
+    },
+    "ITS_eukaryote_sequences-nucl": {
+      "priority": "MEDIUM",
+      "use_case": "Species-level identification",
+      "deep_sea_value": "Variable - depends on deep-sea representation"
+    },
+    "LSU_prokaryote_rRNA-nucl": {
+      "priority": "LOW",
+      "use_case": "Unclear - requires investigation",
+      "deep_sea_value": "Unknown"
+    },
+    "ITS_RefSeq_Fungi-nucl": {
+      "priority": "MEDIUM",
+      "use_case": "Species-level identification",
+      "deep_sea_value": "Variable - depends on deep-sea representation"
+    },
+    "16S_ribosomal_RNA-nucl": {
+      "priority": "LOW",
+      "use_case": "Unclear - requires investigation",
+      "deep_sea_value": "Unknown"
+    },
+    "28S_fungal_sequences-nucl": {
+      "priority": "MEDIUM",
+      "use_case": "28S phylogenetic placement",
+      "deep_sea_value": "Medium - good for family/order level"
+    },
+    "LSU_eukaryote_rRNA-nucl": {
+      "priority": "MEDIUM",
+      "use_case": "28S phylogenetic placement",
+      "deep_sea_value": "Medium - good for family/order level"
+    },
+    "ref_euk_rep_genomes-nucl": {
+      "priority": "MEDIUM",
+      "use_case": "Comprehensive eukaryotic search",
+      "deep_sea_value": "Low-Medium - broad but shallow coverage"
+    }
+  },
+  "analysis_timestamp": "2025-09-11T17:10:37.393774"
+}

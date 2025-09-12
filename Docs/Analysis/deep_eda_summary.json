@@ -1,0 +1,44 @@
+{
+  "taxonomy_structure": {
+    "sample_taxids": 200000,
+    "max_depth": 37,
+    "median_depth": 17.0,
+    "mean_depth": 17.517565,
+    "nodes_with_no_children": 145047,
+    "mean_branching_factor": 5.79946,
+    "p95_branching_factor": 14.0
+  },
+  "sequence_sampling": {},
+  "euk_summary": {
+    "euk_db_count": 9,
+    "total_euk_sequences": 107797951,
+    "total_euk_letters": 4222408539389,
+    "median_letters_per_sequence": 1800.6904599271402,
+    "top_by_sequences": [
+      {
+        "raw_name": "nt_euk-nucl",
+        "sequences": 96990074
+      },
+      {
+        "raw_name": "ref_euk_rep_genomes-nucl",
+        "sequences": 10677305
+      },
+      {
+        "raw_name": "ITS_eukaryote_sequences-nucl",
+        "sequences": 77582
+      },
+      {
+        "raw_name": "ITS_RefSeq_Fungi-nucl",
+        "sequences": 18547
+      },
+      {
+        "raw_name": "28S_fungal_sequences-nucl",
+        "sequences": 11345
+      }
+    ]
+  },
+  "global_totals": {
+    "total_sequences_all": 2000138744,
+    "total_letters_all": 9831059301964
+  }
+}

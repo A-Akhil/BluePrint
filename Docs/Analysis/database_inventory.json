@@ -1,0 +1,230 @@
+{
+  "tsa_nr": {
+    "sequences": 12758962,
+    "bases": 4052568553,
+    "description": "Transcriptome Shotgun Assembly (TSA) sequences",
+    "type": "protein"
+  },
+  "nr": {
+    "sequences": 959233081,
+    "bases": 363842200773,
+    "description": "All non-redundant GenBank CDS translations+PDB+SwissProt+PIR+PRF excluding environmental samples from WGS projects",
+    "type": "protein"
+  },
+  "swissprot": {
+    "sequences": 485662,
+    "bases": 184977373,
+    "description": "Non-redundant UniProtKB/SwissProt sequences",
+    "type": "protein"
+  },
+  "landmark": {
+    "sequences": 506514,
+    "bases": 311806943,
+    "description": "Landmark database for SmartBLAST",
+    "type": "protein"
+  },
+  "nt_euk": {
+    "sequences": 96990074,
+    "bases": 2305394335007,
+    "description": "Eukaryota nt",
+    "type": "nucleotide"
+  },
+  "ref_viroids_rep_genomes": {
+    "sequences": 51,
+    "bases": 17165,
+    "description": "Refseq viroids representative genomes",
+    "type": "nucleotide"
+  },
+  "ref_viruses_rep_genomes": {
+    "sequences": 18683,
+    "bases": 551391645,
+    "description": "Refseq viruses reference genomes",
+    "type": "nucleotide"
+  },
+  "mouse_genome": {
+    "sequences": 61,
+    "bases": 2728222451,
+    "description": "Mus musculus GRCm39 [GCF_000001635.27] chromosomes plus unplaced and unlocalized scaffolds",
+    "type": "nucleotide"
+  },
+  "nt_others": {
+    "sequences": 924186,
+    "bases": 1941416132,
+    "description": "Artificial and other seqs nt",
+    "type": "nucleotide"
+  },
+  "SSU_eukaryote_rRNA": {
+    "sequences": 8784,
+    "bases": 15817265,
+    "description": "Small subunit ribosomal nucleic acid for Eukaryotes",
+    "type": "nucleotide"
+  },
+  "nt_viruses": {
+    "sequences": 11747710,
+    "bases": 253001504677,
+    "description": "Viruses nt",
+    "type": "nucleotide"
+  },
+  "18S_fungal_sequences": {
+    "sequences": 3692,
+    "bases": 4921262,
+    "description": "18S ribosomal RNA sequences (SSU) from Fungi type and reference material",
+    "type": "nucleotide"
+  },
+  "core_nt": {
+    "sequences": 118136970,
+    "bases": 923206411260,
+    "description": "Core nucleotide BLAST database",
+    "type": "nucleotide"
+  },
+  "ITS_eukaryote_sequences": {
+    "sequences": 77582,
+    "bases": 60710056,
+    "description": "ITS eukaryote BLAST",
+    "type": "nucleotide"
+  },
+  "env_nt": {
+    "sequences": 481811,
+    "bases": 931124562,
+    "description": "environmental samples",
+    "type": "nucleotide"
+  },
+  "refseq_select_rna": {
+    "sequences": 63796,
+    "bases": 202951962,
+    "description": "RefSeq Select RNA sequences",
+    "type": "nucleotide"
+  },
+  "refseq_protein": {
+    "sequences": 411766412,
+    "bases": 158412711904,
+    "description": "NCBI Protein Reference Sequences",
+    "type": "protein"
+  },
+  "LSU_prokaryote_rRNA": {
+    "sequences": 4047,
+    "bases": 11856071,
+    "description": "Large subunit ribosomal nucleic acid for Prokaryotes",
+    "type": "nucleotide"
+  },
+  "tsa_nt": {
+    "sequences": 16442794,
+    "bases": 13791580717,
+    "description": "Transcriptome Shotgun Assembly (TSA) sequences",
+    "type": "nucleotide"
+  },
+  "pdbnt": {
+    "sequences": 19597,
+    "bases": 3509764,
+    "description": "PDB nucleotide database",
+    "type": "nucleotide"
+  },
+  "pataa": {
+    "sequences": 3680920,
+    "bases": 725852230,
+    "description": "Protein sequences derived from the Patent division of GenBank",
+    "type": "protein"
+  },
+  "ITS_RefSeq_Fungi": {
+    "sequences": 18547,
+    "bases": 11018844,
+    "description": "Internal transcribed spacer region (ITS) from Fungi type and reference material",
+    "type": "nucleotide"
+  },
+  "taxdb-metadata": {
+    "sequences": 0,
+    "bases": 0,
+    "description": "Taxonomy database",
+    "type": "protein"
+  },
+  "16S_ribosomal_RNA": {
+    "sequences": 27354,
+    "bases": 39625035,
+    "description": "16S ribosomal RNA (Bacteria and Archaea type strains)",
+    "type": "nucleotide"
+  },
+  "Betacoronavirus": {
+    "sequences": 9138114,
+    "bases": 271446603968,
+    "description": "Betacoronavirus",
+    "type": "nucleotide"
+  },
+  "pdbaa": {
+    "sequences": 175659,
+    "bases": 50420065,
+    "description": "PDB protein database",
+    "type": "protein"
+  },
+  "ref_prok_rep_genomes": {
+    "sequences": 1107644,
+    "bases": 98254947040,
+    "description": "Refseq prokaryote reference genomes (contains refseq assembly)",
+    "type": "nucleotide"
+  },
+  "patnt": {
+    "sequences": 49635988,
+    "bases": 28527637851,
+    "description": "Nucleotide sequences derived from the Patent division of GenBank",
+    "type": "nucleotide"
+  },
+  "human_genome": {
+    "sequences": 639,
+    "bases": 3272089205,
+    "description": "Homo sapiens GRCh38.p13 [GCF_000001405.39] chromosomes plus unplaced and unlocalized scaffolds",
+    "type": "nucleotide"
+  },
+  "nt": {
+    "sequences": 118390692,
+    "bases": 2902110241990,
+    "description": "Nucleotide collection (nt)",
+    "type": "nucleotide"
+  },
+  "nt_prok": {
+    "sequences": 8732667,
+    "bases": 341508289884,
+    "description": "Prokaryota (bacteria and archaea) nt",
+    "type": "nucleotide"
+  },
+  "refseq_rna": {
+    "sequences": 72339242,
+    "bases": 208670374879,
+    "description": "NCBI Transcript Reference Sequences",
+    "type": "nucleotide"
+  },
+  "mito": {
+    "sequences": 18057,
+    "bases": 594560072,
+    "description": "NCBI Genomic Mitochondrial Reference Sequences",
+    "type": "nucleotide"
+  },
+  "28S_fungal_sequences": {
+    "sequences": 11345,
+    "bases": 10967896,
+    "description": "28S ribosomal RNA sequences (LSU) from Fungi type and reference material",
+    "type": "nucleotide"
+  },
+  "LSU_eukaryote_rRNA": {
+    "sequences": 6575,
+    "bases": 14042513,
+    "description": "Large subunit ribosomal nucleic acid for Eukaryotes",
+    "type": "nucleotide"
+  },
+  "refseq_select_prot": {
+    "sequences": 84694758,
+    "bases": 27748703792,
+    "description": "RefSeq Select proteins",
+    "type": "protein"
+  },
+  "ref_euk_rep_genomes": {
+    "sequences": 10677305,
+    "bases": 1916884870475,
+    "description": "RefSeq Eukaryotic Representative Genome Database",
+    "type": "nucleotide"
+  },
+  "env_nr": {
+    "sequences": 11812769,
+    "bases": 2539020683,
+    "description": "Proteins from WGS metagenomic projects (env_nr).",
+    "type": "protein"
+  }
+}

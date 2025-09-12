@@ -1,0 +1,20 @@
+{
+  "SSU_eukaryote_rRNA": {
+    "database_name": "SSU_eukaryote_rRNA",
+    "accessible": true,
+    "info_output": "Database: Small subunit ribosomal nucleic acid for Eukaryotes\n\t8,784 sequences; 15,817,265 total bases\n\nDate: Dec 5, 2022  10:18 AM\tLongest sequence: 2,929 bases\n\nBLASTDB Version: 5\n\nVolumes:\n\t/raid/home/srmist32/sihdna/ncbi_blast_db_files/SSU_eukaryote_rRNA\n",
+    "info_line": "8,784 sequences; 15,817,265 total bases"
+  },
+  "LSU_eukaryote_rRNA": {
+    "database_name": "LSU_eukaryote_rRNA",
+    "accessible": true,
+    "info_output": "Database: Large subunit ribosomal nucleic acid for Eukaryotes\n\t6,575 sequences; 14,042,513 total bases\n\nDate: Dec 5, 2022  9:46 AM\tLongest sequence: 4,592 bases\n\nBLASTDB Version: 5\n\nVolumes:\n\t/raid/home/srmist32/sihdna/ncbi_blast_db_files/LSU_eukaryote_rRNA\n",
+    "info_line": "6,575 sequences; 14,042,513 total bases"
+  },
+  "ITS_eukaryote_sequences": {
+    "database_name": "ITS_eukaryote_sequences",
+    "accessible": true,
+    "info_output": "Database: ITS eukaryote BLAST\n\t77,582 sequences; 60,710,056 total bases\n\nDate: Sep 8, 2025  5:36 AM\tLongest sequence: 13,565 bases\n\nBLASTDB Version: 5\n\nVolumes:\n\t/raid/home/srmist32/sihdna/ncbi_blast_db_files/ITS_eukaryote_sequences\n",
+    "info_line": "77,582 sequences; 60,710,056 total bases"
+  }
+}

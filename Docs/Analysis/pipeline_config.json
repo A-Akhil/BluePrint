@@ -1,0 +1,37 @@
+{
+  "Step_1_Primary_18S": {
+    "database": "SSU_eukaryote_rRNA-nucl",
+    "command": "blastn -db SSU_eukaryote_rRNA-nucl -query edna.fasta -out step1_results.xml -outfmt 5",
+    "expected_coverage": "60-80%",
+    "focus": "Protist diversity",
+    "priority": "ESSENTIAL"
+  },
+  "Step_2_Secondary_28S": {
+    "database": "LSU_eukaryote_rRNA-nucl",
+    "command": "blastn -db LSU_eukaryote_rRNA-nucl -query unassigned_step1.fasta -out step2_results.xml -outfmt 5",
+    "expected_coverage": "40-60% additional",
+    "focus": "Phylogenetic placement",
+    "priority": "IMPORTANT"
+  },
+  "Step_3_Species_Level": {
+    "database": "ITS_eukaryote_sequences-nucl",
+    "command": "blastn -db ITS_eukaryote_sequences-nucl -query unassigned_step2.fasta -out step3_results.xml -outfmt 5",
+    "expected_coverage": "10-30% additional",
+    "focus": "Species identification",
+    "priority": "SUPPLEMENTARY"
+  },
+  "Step_4_Comprehensive": {
+    "database": "nt_euk-nucl",
+    "command": "blastn -db nt_euk-nucl -query unassigned_step3.fasta -out step4_results.xml -outfmt 5",
+    "expected_coverage": "5-15% additional",
+    "focus": "Comprehensive search",
+    "priority": "BACKUP (expensive)"
+  },
+  "Step_5_Novel_Taxa": {
+    "database": "AI/ML approach",
+    "command": "python novel_taxa_classifier.py unassigned_final.fasta",
+    "expected_coverage": "20-40% of total",
+    "focus": "Novel lineage discovery",
+    "priority": "CRITICAL for deep-sea"
+  }
+}
