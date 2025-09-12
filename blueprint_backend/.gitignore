@@ -1,0 +1,33 @@
+# Traceability: User requested a .gitignore for a Django project. No additional context in rough_note.md, so using standard minimal rules.
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Django specific
+db.sqlite3
+*.log
+
+# Environment
+.env
+*.env
+
+# Media and static files
+/media/
+/staticfiles/
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+
+# Migrations
+**/migrations/
+!**/migrations/__init__.py
+
+# OS files
+.DS_Store
+Thumbs.db
